@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Weather Check</title>
+    <link rel="icon" type="background-image" href="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .four {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 40px;
+        }
+
+        .one {
+            background-color: rgba(0, 0, 0, 0.678);
+            color: white;
+            padding-top: 5px;
+            width: 200px;
+            height: 100px;
+            border-radius: 8px;
+            padding-left: 10px;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.566);
+        }
+
+        .two {
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.566);
+            background-color: rgba(0, 0, 0, 0.628);
+            color: white;
+            padding-top: 5px;
+            width: 200px;
+            height: 100px;
+            border-radius: 8px;
+            padding-left: 10px;
+        }
+
+        .five {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 40px;
+        }
+
+        .three {
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.566);
+            background-color: rgba(0, 0, 0, 0.616);
+            color: white;
+            width: 200px;
+            height: 100px;
+            border-radius: 8px;
+            padding-left: 10px;
+            padding-top: 5px;
+        }
+
+        .for {
+            background-color: rgba(0, 0, 0, 0.653);
+            color: white;
+            width: 200px;
+            height: 100px;
+            border-radius: 8px;
+            padding-top: 5px;
+            padding-left: 10px;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.566);
+        }
+
+
+
+        input {
+            height: 30px;
+            width: 400px;
+            background-color: rgba(0, 0, 0, 0.703);
+            border-radius: 15px;
+            border-color: antiquewhite;
+            color: black;
+            padding: 5px 0px 0px 50px;
+            margin-left: 45px
+        }
+        input:hover{
+            background-color: rgba(240, 248, 255, 0.562);
+            color: black;
+        }
+
+        #para {
+            padding: 8px;
+
+        }
+
+        body {
+            background-image: url(' https://images.pexels.com/photos/186980/pexels-photo-186980.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-position: center;
+            height: 95vh;
+            background-size: unset;
+        }
+
+        .box {
+            margin-top: 10px;
+            background-color: rgba(255, 255, 255, 0.148);
+            width: 550px;
+            height: 550px;
+            border-radius: 10px;
+            padding-top: 9px;
+            margin-left: 350px;
+            box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.596);
+
+
+        }
+
+        .title {
+            color: black;
+            text-align: center;
+            padding: 19px;
+        }
+
+
+        .btn button {
+            height: 40px;
+            width: 170px;
+            border-radius: 20px;
+            border-color: rgba(245, 222, 179, 0);
+            background-color: rgba(0, 0, 0, 0.388);
+            color: white;
+            margin-left: 190px;
+            margin-top: 10px;
+           
+
+
+        }
+        .btn button:hover{
+            background-color: rgba(204, 218, 218, 0.726);
+            color: black;
+        }
+        .one:hover{
+            background-color: rgba(189, 201, 197, 0.269);
+            color: white;
+            box-shadow: 2px 2px 2px 2px rgb(0, 15, 0);
+
+        }
+        .two:hover{
+            background-color: rgba(218, 222, 221, 0.176);
+            color: white;
+            box-shadow: 2px 2px 2px 2px rgb(0, 10, 0);
+        }
+        .three:hover{
+            background-color: rgba(240, 244, 243, 0.24);
+            color: white;
+            box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
+        }
+        .for:hover{
+            background-color: rgba(221, 233, 229, 0.212);
+            color: white;
+            box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
+        }
+   
+       
+       
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box">
+       
+        <div class="search">
+            <input id="searchvalue" placeholder="Enter The City" type="text">
+
+        </div>
+        <div class="btn">
+            <button onclick="search()">SEARCH</button>
+        </div>
+
+
+
+        <div class="title">
+            <h1 id="temp">0*C</h1>
+            <h4 id="cname">city name</h4>
+            <p id="coname">city</p>
+        </div>
+
+        <div class="four">
+            <div class="one">
+                <h2>maximum temp</h2>
+                <h1 class="detail">0</h1>
+                
+            </div>
+            <div class="two">
+                <h2>minimun temp</h2>
+                <h1 class="detail">0</h1>
+                
+                
+            </div>
+        </div>
+        <div class="five">
+            <div class="three">
+                <h2>pressure</h2>
+                <h1 class="detail">0</h1>
+            </div>
+            <div class="for">
+                <h2>HUMIDITY</h2>
+                <h1 class="detail">0</h1>
+                
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+
+</html>
